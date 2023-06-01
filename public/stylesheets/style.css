@@ -1,0 +1,22 @@
+/*
+-------------------------------------------------------
+-----           Style Sheet - style.css           -----
+-----  Stylizes almost everything on the website  -----
+-----                Chris Danyluk                -----
+-------------------------------------------------------
+*/
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1, p {
+  color: var(--obg);
+}

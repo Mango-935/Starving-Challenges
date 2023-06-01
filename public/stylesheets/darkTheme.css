@@ -1,0 +1,46 @@
+/*
+-------------------------------------------------------
+-----   Dark Theme Style Sheet	- darkTheme.css   -----
+-----  Color codes for a standardized dark theme  -----
+-----                Chris Danyluk                -----
+-------------------------------------------------------
+
+
+Dark Theme Anatomy (Purple Base):	https://material.io/design/color/dark-theme.html#ui-application
+	Background- #121212							Background, Dark Gray
+	Surface- #121212							Division, Dark Gray
+	Primary- #BB86FC							Primary Color, !Text, Light Purple
+		Primary Variant- #3700B3				Primary Variant, !Text, Saturated Purple
+	Secondary- #03DAC5							Secondary Color, !Text, Teal
+	On Background- #FFFFFF						Text, White
+	On Surface- #FFFFFF							Text, White
+	On Primary- #000000							Text, Black
+	On Secondary- #000000						Text,Black
+	Error- #CF6679								Error, Drained Red
+    On Error- #000000							Texr, Black
+*/
+
+:root {
+	--bg: #121212;
+	--obg: #FFFFFF;
+	--surface: #121212;
+	--oSurface: #FFFFFF;
+	--primary: #BB86FC;
+	--vPrimary: #3700B3;
+	--oPrimary: #000000;
+	--secondary: #03DAC5;
+	--oSecondary: #000000;
+	--error: #CF6679;
+	--oError: #000000;
+}
+
+.dp00		{--oSurface: #ffffff00; background-color: var(--oSurface);}
+.dp01		{--oSurface: #ffffff0d; background-color: var(--oSurface);}
+.dp02		{--oSurface: #ffffff12; background-color: var(--oSurface);}
+.dp03		{--oSurface: #ffffff14; background-color: var(--oSurface);}
+.dp04		{--oSurface: #ffffff17; background-color: var(--oSurface);}
+.dp06		{--oSurface: #ffffff1c; background-color: var(--oSurface);}
+.dp08		{--oSurface: #ffffff1f; background-color: var(--oSurface);}
+.dp12		{--oSurface: #ffffff24; background-color: var(--oSurface);}
+.dp16		{--oSurface: #ffffff26; background-color: var(--oSurface);}
+.dp24		{--oSurface: #ffffff29; background-color: var(--oSurface);}
