@@ -15,8 +15,18 @@ body {
 
 a {
   color: #00B7FF;
+  cursor: pointer;
 }
 
 h1, p {
   color: var(--obg);
+}
+
+.card {
+  width:500px;
+  margin: 2%;
+}
+
+.card-title {
+  text-align: center;
 }

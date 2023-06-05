@@ -11,10 +11,159 @@
 <html>
   <head>
     <%- include('../templates/header') %>
+    <script src="./javascripts/index.js"></script>
   </head>
-  <body>
+  <body onload="readSave()">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <a href="creator">Character Creator</a>
+    <div class="d-flex flex-wrap"> <!--Player Select Box-->
+      <a class="card" id="0" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="1" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="2" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="3" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="4" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="5" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="6" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="7" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="8" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="9" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="10" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="11" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="12" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="13" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="14" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="15" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="16" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="17" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="18" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="19" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="20" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="21" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="22" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <a class="card" id="23" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
+        <img src="" class="card-img-top"> <!--Character Image-->
+        <div class="card-img-overlay"> <!--Overlaying Text Box-->
+          <h5 class="card-title"></h5> <!--Character Name-->
+        </div>
+      </a>
+      <form id="loadCharacter" action="/creator" method="POST">
+        <input type="hidden" name="data" value="" readonly>
+      </form>
+    </div>
   </body>
 </html>

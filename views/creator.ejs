@@ -13,10 +13,10 @@
     <%- include('../templates/header') %>
     <script src="./javascripts/creator.js"></script>
   </head>
-  <body>
+  <body onload="readData(<%= data %>)">
     <h1><%= title %></h1>
-    <p id="test">Welcome to <%= title %></p>
-    <button type="button" class="btn btn-primary" onclick="readSave()">Get Test</button>
+    <p id="test">Welcome, <%= data %>!</p>
+    <button type="button" class="btn btn-primary">Get Test</button>
     <a href="/">Back to Home</a>
   </body>
 </html>
