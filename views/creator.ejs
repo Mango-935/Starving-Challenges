@@ -17,7 +17,6 @@
     <h1><%= title %></h1>
     <p>Welcome, <%= data %>!</p>
     <input id="name">
-    <br>
     <select id="gender">
       <option value="M">Male</option>
       <option value="F">Female</option>
@@ -51,6 +50,7 @@
     </div> <!--Row End-->
     <br>
     <h4 id="wins">Wins:</h4>
+    <button type="button" class="btn btn-success" onclick="saveData(<%= data %>)">Save</button>
     <a href="/">Back to Home</a>
   </body>
 </html>

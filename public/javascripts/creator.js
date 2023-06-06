@@ -10,7 +10,8 @@
 let player;
 
 async function readData(data) {
-    player = await getPlayerInfo(data);
+    if (player == null)
+        player = await getPlayerInfo(data);
     document.getElementById("name").value = player.name;
     document.getElementById("gender").value = player.gender;
     for (let i = 0; i < 6; i++)
@@ -27,4 +28,27 @@ async function getPlayerInfo(id) {
     catch (error) {
         console.error(error);
     }
+}
+
+function saveData(data) {
+    let save = {
+        id: data,
+        name: document.getElementById("name").value,
+        gender: document.getElementById("gender").value,
+        str: document.getElementById("str").value,
+        dex: document.getElementById("dex").value,
+        con: document.getElementById("con").value,
+        int: document.getElementById("int").value,
+        wis: document.getElementById("wis").value,
+        cha: document.getElementById("cha").value,
+        attributes: player.attributes
+    };
+    fetch("./save", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(save)
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(err => console.error(err))
 }
