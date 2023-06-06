@@ -1,74 +1,290 @@
 [
     {
-        "name": "Joe"
+        "name": "Joe",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Steohanie"
+        "name": "Steohanie",
+        "gender": "F",
+        "str": "4",
+        "dex": "8",
+        "con": "9",
+        "int": "6",
+        "wis": "6",
+        "cha": "2",
+        "attributes": [],
+        "wins": "12"
     },
     {
-        "name": "Bill"
+        "name": "Bill",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Bobbio"
+        "name": "Bobbio",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Mac"
+        "name": "Mac",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Timothy"
+        "name": "Timothy",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Johanna"
+        "name": "Johanna",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Gina"
+        "name": "Gina",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "R'Kesh from the Dell Store"
+        "name": "R'Kesh from the Dell Store",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Chris"
+        "name": "Chris",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Lia"
+        "name": "Lia",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Fio"
+        "name": "Fio",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Faith"
+        "name": "Faith",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Mercucio"
+        "name": "Mercucio",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Jaiden"
+        "name": "Jaiden",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Alex"
+        "name": "Alex",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Dave"
+        "name": "Dave",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Pat"
+        "name": "Pat",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Rick"
+        "name": "Rick",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Gonzales"
+        "name": "Gonzales",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Luigi"
+        "name": "Luigi",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Kyle"
+        "name": "Kyle",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Marko"
+        "name": "Marko",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     },
     {
-        "name": "Yuhlianna"
+        "name": "Yuhlianna",
+        "gender": "M",
+        "str": "10",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "10",
+        "cha": "10",
+        "attributes": [],
+        "wins": "0"
     }
 ]
