@@ -49,6 +49,13 @@
       </div>
     </div> <!--Row End-->
     <br>
+    <div id="attribute_selection_div">
+      <select id="attribute_select" class="form-select" onchange="attributeChange(true)">
+        <option value="">Select an attribute.</option>
+      </select>
+      <div id="attribute_box"></div>
+    </div>
+    <br>
     <h4 id="wins">Wins:</h4>
     <button type="button" class="btn btn-success" onclick="saveData(<%= data %>)">Save</button>
     <a href="/">Back to Home</a>

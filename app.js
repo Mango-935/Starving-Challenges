@@ -27,19 +27,19 @@ app.post('/creator', (req, res) => {
   res.render('creator', {title: "Character Creator", data: req.body.data});
 });
 
-app.post('/save', (req, res) => {
+app.post('/save', (req, res) => { //NOTE: Given the fact that this website isn't meant to be hosted on a public website, I have no problems with having one local save file
   const data = JSON.parse(fs.readFileSync('./data/players.json')); //Get the creator block
 
   data[req.body.id] = {
     name: req.body.name,
     gender: req.body.gender,
-    str: req.body.str,
-    dex: req.body.dex,
-    con: req.body.con,
-    int: req.body.int,
-    wis: req.body.wis,
-    cha: req.body.cha,
-    attributes: data[req.body.id].attributes,
+    str: Number(req.body.str),
+    dex: Number(req.body.dex),
+    con: Number(req.body.con),
+    int: Number(req.body.int),
+    wis: Number(req.body.wis),
+    cha: Number(req.body.cha),
+    attributes: req.body.attributes.map(Number),
     wins: data[req.body.id].wins
   }; //Overwrite the data in the character's block
 

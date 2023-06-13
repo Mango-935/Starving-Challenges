@@ -1,3 +1,26 @@
-{
-    
-}
+[
+    {
+        "id": 0,
+        "name": "Knife Proficiency",
+        "value": 1,
+        "prerequisites": null
+    },
+    {
+        "id": 1,
+        "name": "Knife Mastery",
+        "value": 2,
+        "prerequisites": 0
+    },
+    {
+        "id": 2,
+        "name": "Bow Proficiency",
+        "value": 1,
+        "prerequisites": null
+    },
+    {
+        "id": 3,
+        "name": "Bow Mastery",
+        "value": 2,
+        "prerequisites": 2
+    }
+]
