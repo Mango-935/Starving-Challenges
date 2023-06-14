@@ -10,54 +10,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../templates/header') %>
-    <script src="./javascripts/creator.js"></script>
+    <%- include('../templates/header') %> <!--Includes and runs the template header file-->
+    <script src="./javascripts/creator.js"></script> <!--Links the javascript file 'creator' to this page-->
   </head>
-  <body onload="readData(<%= data %>)">
+  <body onload="readData(<%= data %>)"> <!--Once the document has finished loading, read the saved player data. NOTE: For some reason, this syntax causes errors in VSCode, despite being correct-->
     <h1><%= title %></h1>
     <p>Welcome, <%= data %>!</p>
-    <input id="name">
-    <select id="gender">
-      <option value="M">Male</option>
-      <option value="F">Female</option>
+    <input id="name"> <!--Creates an editable input field for player name-->
+    <select id="gender"> <!--Creates a drop down box for selecting player gender-->
+      <option value="M">Male</option> 
+      <option value="F">Female</option> 
     </select>
     <br>
-    <div class="row">
-      <div class="col">
-        <label>STR</label>
-        <input type="number" id="str" class="stats" min="1" max="10">
-      </div>
-      <div class="col">
-        <label>DEX</label>
-        <input type="number" id="dex" class="stats" min="1" max="10">
-      </div>
-      <div class="col">
-        <label>CON</label>
-        <input type="number" id="con" class="stats" min="1" max="10">
-      </div>
-      <div class="col">
-        <label>INT</label>
-        <input type="number" id="int" class="stats" min="1" max="10">
-      </div>
-      <div class="col">
-        <label>WIS</label>
-        <input type="number" id="wis" class="stats" min="1" max="10">
-      </div>
-      <div class="col">
-        <label>CHA</label>
-        <input type="number" id="cha" class="stats" min="1" max="10">
-      </div>
+    <div class="row"> <!--Row-->
+      <div class="col"> <!--STR Stat Div-->
+        <label>STR</label> <!--Label Displaying STR-->
+        <input type="number" id="str" class="stats" min="1" max="10"> <!--Creates an editable input field that only accepts numbers 1-10-->
+      </div> <!--End of STR Stat Div-->
+      <div class="col"> <!--DEX Stat Div-->
+        <label>DEX</label> <!--Label Displaying DEX-->
+        <input type="number" id="dex" class="stats" min="1" max="10"> <!--Creates an editable input field that only accepts numbers 1-10-->
+      </div> <!--End of DEX Stat Div-->
+      <div class="col"> <!--CON Stat Div-->
+        <label>CON</label> <!--Label Displaying CON-->
+        <input type="number" id="con" class="stats" min="1" max="10"> <!--Creates an editable input field that only accepts numbers 1-10-->
+      </div> <!--End of CON Stat Div-->
+      <div class="col"> <!--INT Stat Div-->
+        <label>INT</label> <!--Label Displaying INT-->
+        <input type="number" id="int" class="stats" min="1" max="10"> <!--Creates an editable input field that only accepts numbers 1-10-->
+      </div> <!--End of INT Stat Div-->
+      <div class="col"> <!--WIS Stat Div-->
+        <label>WIS</label> <!--Label Displaying WIS-->
+        <input type="number" id="wis" class="stats" min="1" max="10"> <!--Creates an editable input field that only accepts numbers 1-10-->
+      </div> <!--End of WIS Stat Div-->
+      <div class="col"> <!--CHA Stat Div-->
+        <label>CHA</label> <!--Label Displaying CHA-->
+        <input type="number" id="cha" class="stats" min="1" max="10"> <!--Creates an editable input field that only accepts numbers 1-10-->
+      </div> <!--End of CHA Stat Div-->
     </div> <!--Row End-->
     <br>
-    <div id="attribute_selection_div">
-      <select id="attribute_select" class="form-select" onchange="attributeChange(true)">
-        <option value="">Select an attribute.</option>
+    <div id="attribute_selection_div"> <!--Attribute Select and View Div-->
+      <select id="attribute_select" class="form-select" onchange="attributeChange(true)"> <!--Creates a drop down box that allows players to select their attributes-->
+        <option value="">Select an attribute.</option> <!--Default Value-->
       </select>
-      <div id="attribute_box"></div>
+      <div id="attribute_box"></div> <!--Attribute View Div-->
     </div>
     <br>
-    <h4 id="wins">Wins:</h4>
-    <button type="button" class="btn btn-success" onclick="saveData(<%= data %>)">Save</button>
-    <a href="/">Back to Home</a>
+    <h4 id="wins">Wins:</h4> <!--Label Displaying Character Wins-->
+    <button type="button" class="btn btn-success" onclick="saveData(<%= data %>)">Save</button> <!--Button that saves the current player info-->
+    <a href="/">Back to Home</a> <!--Link back to root page-->
   </body>
 </html>

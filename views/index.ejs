@@ -10,11 +10,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../templates/header') %>
-    <script src="./javascripts/index.js"></script>
+    <%- include('../templates/header') %> <!--Includes and runs the template header file-->
+    <script src="./javascripts/index.js"></script> <!--Links the javascript file 'index' to this page-->
   </head>
-  <body onload="readSave()">
-    <h1><%= title %></h1>
+  <body onload="readSave()"> <!--Once the document has finished loading, read the saved player data-->
+    <h1><%= title %></h1> 
     <p>Welcome to <%= title %></p>
     <div class="d-flex flex-wrap"> <!--Player Select Box-->
       <a class="card" id="0" onclick="loadCharacter(id)"> <!--Link to Character Editor for this Character-->
@@ -161,8 +161,8 @@
           <h5 class="card-title"></h5> <!--Character Name-->
         </div>
       </a>
-      <form id="loadCharacter" action="/creator" method="POST">
-        <input type="hidden" name="data" value="" readonly>
+      <form id="loadCharacter" action="/creator" method="POST"> <!--Creates a form to submit selected character id-->
+        <input type="hidden" name="data" value="" readonly> <!--Invisible field modified to contain the selected character id when submitted dynamically-->
       </form>
     </div> <!--Character Selector End-->
   </body>
