@@ -26,6 +26,6 @@ async function readSave() { //Reads the player's save file
 
 function loadCharacter(id) { //Called when user selects a unique character to edit
     let form = document.getElementById("loadCharacter"); //Save the form to a variable
-    form.childNodes[1].value = id; //Set the hidden input in the form to have a value matching the selected character id
+    form.children[0].value = id; //Set the hidden input in the form to have a value matching the selected character id
     form.submit(); //Submit the form to the server
 }

@@ -7,8 +7,8 @@
 */
 
 
-let player; //Variable containing specific player info
-let attributeMap; //Variable containing all attribute data
+let player = null; //Variable containing specific player info
+let attributeMap = null; //Variable containing all attribute data
 
 async function readData(data) { //Called on page load, displays saved player data
     if (player == null) //If the data has not yet been loaded in
