@@ -30,3 +30,28 @@ h1, p {
 .card-title {
   text-align: center;
 }
+
+#attribute-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.close {
+  position: relative;
+}
+
+.close > span {
+  visibility: hidden;
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  background-color: white;
+  color: var(--surface);
+  padding-left: 5%;
+  text-align: right;
+}
+
+.close:hover > span {
+  visibility: visible;
+}

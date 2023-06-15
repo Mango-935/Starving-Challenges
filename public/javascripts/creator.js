@@ -21,7 +21,8 @@ async function readData(data) { //Called on page load, displays saved player dat
         if (player.attributes.indexOf(i.id) !== -1) { //If the attribute appears in the players attribute list, add it to the attribute view div
             const aButton = document.createElement("button"); //Create a new button
             aButton.value = i.id; //Set its value to the attribute id. NOTE: attribute id is sorted by how they appear in the attributes.json file
-            aButton.innerHTML = i.name; //Set its text to the attribute name
+            aButton.innerHTML = i.name + "<span>x</span>"; //Set its text to the attribute name and gives it a closable x button
+            aButton.className = "close";
             aButton.onclick = function() {attributeChange(false, this)}; //Add the onClick attribute to run the attribute removal function
             document.getElementById("attribute_box").appendChild(aButton); //Add the button to the attribute view div
         }
@@ -53,7 +54,8 @@ function attributeChange(option, element = null) { //option = true for add, opti
 
         const aButton = document.createElement("button"); //Create a new button
         aButton.value = attrValue.value; //Set its value to the option value
-        aButton.innerHTML = attrValue.innerHTML; //Set its text to the option text
+        aButton.innerHTML = attrValue.innerHTML + "<span>x</span>"; //Set its text to the option text and gives it a closable x button
+        aButton.className = "close";
         aButton.onclick = function() {attributeChange(false, this)}; //Add the onClick attribute to run the attribute removal function
         document.getElementById("attribute_box").appendChild(aButton); //Add the button to the attribute view div
         
