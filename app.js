@@ -23,6 +23,10 @@ app.get('/', (req, res) => { //Gets requests to the root route
   res.render('index', {title: "Starving Games"}); //Renders the root 'index' page
 });
 
+app.get('/reaping', (req, res) => {
+  res.render('reaping', {title: "Reaping"});
+});
+
 app.post('/creator', (req, res) => { //Gets requests to the creator route from POST methods
   res.render('creator', {title: "Character Creator", data: req.body.data}); //Renders the creator page and passes on the selected character
 });
