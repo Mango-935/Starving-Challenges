@@ -1,6 +1,10 @@
 [
     {
-        "text": "PLAYER_NAME runs away from the Cornucopia.",
+        "text": "~PLAYER_NAME_0~ runs away from the Cornucopia.",
         "pCount": 1
+    },
+    {
+        "text": "~PLAYER_NAME_1~ stabs ~PLAYER_NAME_0~ within the Cornucopia.",
+        "pCount": 2
     }
 ]

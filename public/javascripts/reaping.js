@@ -16,14 +16,14 @@ async function startGame() {
     let activePlayers = []
 
     for (let i = 0; i < 25; i++)
-        map[i] = {players: []};
+        map[i] = [];
     
     for (let i in players) {
-        map[12].players.push(Number(i));
+        map[12].push(Number(i));
         players[i].inventory = [];
         players[i].isAlive = true;
         players[i].mapTile = 12;
-        activePlayers.push(i);
+        activePlayers.push(Number(i));
     }
     
     while (activePlayers.length > 0) {
@@ -34,8 +34,17 @@ async function startGame() {
             if (encounters[i].pCount <= adjacent.length + 1)
                 possibilities.push(i);
         possibilities = possibilities.splice(Math.floor(Math.random() * possibilities.length), 1);
-
-        document.getElementById("test").innerHTML += "<br>" + encounters[possibilities].text.replace("PLAYER_NAME", players[sP].name);
+        let eventText = encounters[possibilities].text.replace("~PLAYER_NAME_0~", players[sP].name);
+        if (encounters[possibilities].pCount > 1) {
+            let i = 1;
+            do {
+                let aP = adjacent.splice(Math.floor(Math.random() * adjacent.length), 1);
+                activePlayers.splice(activePlayers.indexOf(aP[0]), 1);
+                eventText = eventText.replace("~PLAYER_NAME_1~", players[aP].name);
+                i++;
+            } while (i < encounters[possibilities].pCount);
+        }
+        document.getElementById("test").innerHTML += eventText + "<br>";
     }
 }
 
@@ -60,7 +69,7 @@ function getAdjacentPlayers(mapTile, pID, active) {
     let colCount = -1;
     let adjacentPlayers = [];
     do {
-        if (mapTile + rowCount >= 0 && (mapTile % 5) + colCount >= 0 && (mapTile % 5) + colCount <= 5)
+        if (mapTile + rowCount >= 0 && mapTile + rowCount <= 24 && (mapTile % 5) + colCount >= 0 && (mapTile % 5) + colCount <= 4)
             adjacentPlayers = adjacentPlayers.concat(map[mapTile + rowCount + colCount]);
         if (colCount === 1) {
             rowCount += 5;
