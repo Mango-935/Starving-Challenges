@@ -13,7 +13,7 @@ let stage = 0;
 
 async function startGame() {
     await getPlayers();
-    let activePlayers = []
+    let activePlayers = [];
 
     for (let i = 0; i < 25; i++)
         map[i] = [];
@@ -26,26 +26,24 @@ async function startGame() {
         activePlayers.push(Number(i));
     }
     
-    while (activePlayers.length > 0) {
-        let sP = activePlayers.splice(Math.floor(Math.random() * activePlayers.length), 1);
-        let adjacent = getAdjacentPlayers(players[sP].mapTile, sP, activePlayers);
-        let possibilities = [];
-        for (let i in encounters)
-            if (encounters[i].pCount <= adjacent.length + 1)
-                possibilities.push(i);
-        possibilities = possibilities.splice(Math.floor(Math.random() * possibilities.length), 1);
-        let eventText = encounters[possibilities].text.replace("~PLAYER_NAME_0~", players[sP].name);
-        if (encounters[possibilities].pCount > 1) {
-            let i = 1;
-            do {
-                let aP = adjacent.splice(Math.floor(Math.random() * adjacent.length), 1);
-                activePlayers.splice(activePlayers.indexOf(aP[0]), 1);
-                eventText = eventText.replace("~PLAYER_NAME_1~", players[aP].name);
-                i++;
-            } while (i < encounters[possibilities].pCount);
-        }
-        document.getElementById("test").innerHTML += eventText + "<br>";
+    playRound(activePlayers);
+}
+
+function continueGame() {
+    let activePlayers = [];
+
+    for (let i in players) {
+        if (players[i].isAlive)
+            activePlayers.push(Number(i));
     }
+    
+    playRound(activePlayers);
+}
+
+function viewMap() {
+    document.getElementById("gameRound").innerHTML = "";
+    for (let i = 0; i < players.length; i++)
+        document.getElementById("gameRound").innerHTML += players[i].name + " " + players[i].isAlive + "<br>";
 }
 
 async function getPlayers() {
@@ -81,4 +79,38 @@ function getAdjacentPlayers(mapTile, pID, active) {
     adjacentPlayers.splice(adjacentPlayers.indexOf(pID), 1);
     adjacentPlayers = adjacentPlayers.filter((value) => {return active.includes(value)});
     return adjacentPlayers;
+}
+
+function playRound(activePlayers) {
+    let deadCount = [];
+    document.getElementById("gameRound").innerHTML = "";
+    while (activePlayers.length > 0) {
+        let sP = activePlayers.splice(Math.floor(Math.random() * activePlayers.length), 1);
+        let adjacent = getAdjacentPlayers(players[sP].mapTile, sP, activePlayers);
+        let possibilities = [];
+        for (let i in encounters)
+            if (encounters[i].pCount <= adjacent.length + 1 && ((stage >= 1 && encounters[i].stage === -1) || (stage === 0 && encounters[i].stage === 0)))
+                possibilities.push(i);
+        possibilities = possibilities.splice(Math.floor(Math.random() * possibilities.length), 1);
+        let eventText = encounters[possibilities].text.replace("~PLAYER_NAME_0~", players[sP].name);
+        if (encounters[possibilities].dCount.includes(0))
+            deadCount.push(sP);
+        if (encounters[possibilities].pCount > 1) {
+            let i = 1;
+            do {
+                let aP = adjacent.splice(Math.floor(Math.random() * adjacent.length), 1);
+                activePlayers.splice(activePlayers.indexOf(aP[0]), 1);
+                eventText = eventText.replace("~PLAYER_NAME_" + i + "~", players[aP].name);
+                if (encounters[possibilities].dCount.includes(i))
+                    deadCount.push(aP);
+                i++;
+            } while (i < encounters[possibilities].pCount);
+        }
+        document.getElementById("gameRound").innerHTML += eventText + "<br>";
+    }
+
+    for (let i = 0; i < deadCount.length; i++)
+        players[deadCount[i]].isAlive = false;
+
+    stage++;
 }

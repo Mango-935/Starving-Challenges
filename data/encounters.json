@@ -1,10 +1,14 @@
 [
     {
         "text": "~PLAYER_NAME_0~ runs away from the Cornucopia.",
-        "pCount": 1
+        "pCount": 1,
+        "dCount": [],
+        "stage": 0
     },
     {
-        "text": "~PLAYER_NAME_1~ stabs ~PLAYER_NAME_0~ within the Cornucopia.",
-        "pCount": 2
+        "text": "~PLAYER_NAME_0~ stabs ~PLAYER_NAME_1~ within the Cornucopia.",
+        "pCount": 2,
+        "dCount": [1],
+        "stage": 0
     }
 ]
